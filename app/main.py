@@ -1,9 +1,5 @@
 from fastapi import FastAPI
-from easyocr import Readerclear
+from app.routers.todos import router as todos_router
 
 app = FastAPI()
-
-
-@app.get("/")
-async def root():
-    return {"message": "Hello World"}
+app.include_router(todos_router, prefix="/api/todos")

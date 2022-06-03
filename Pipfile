@@ -8,6 +8,8 @@ requests = "*"
 uvicorn = "*"
 fastapi = "*"
 easyocr = "*"
+pydantic = "*"
+sqlalchemy = "*"
 
 [dev-packages]
 autopep8 = "*"
