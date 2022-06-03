@@ -6,6 +6,8 @@ name = "pypi"
 [packages]
 requests = "*"
 uvicorn = "*"
+fastapi = "*"
+easyocr = "*"
 
 [dev-packages]
 autopep8 = "*"

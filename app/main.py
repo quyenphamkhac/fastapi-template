@@ -1,7 +1,9 @@
-from urllib import response
-import requests
+from fastapi import FastAPI
+from easyocr import Readerclear
+
+app = FastAPI()
 
 
-response = requests.get('https://httpbin.org/ip')
-
-print('Your IP is: ' + response.json()['origin'])
+@app.get("/")
+async def root():
+    return {"message": "Hello World"}
