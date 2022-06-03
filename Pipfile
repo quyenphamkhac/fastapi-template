@@ -5,6 +5,7 @@ name = "pypi"
 
 [packages]
 requests = "*"
+uvicorn = "*"
 
 [dev-packages]
 autopep8 = "*"
