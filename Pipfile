@@ -10,6 +10,7 @@ fastapi = "*"
 easyocr = "*"
 pydantic = "*"
 sqlalchemy = "*"
+pg8000 = "*"
 
 [dev-packages]
 autopep8 = "*"

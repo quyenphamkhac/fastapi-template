@@ -1,6 +1,14 @@
 from fastapi import FastAPI
 from app.routers.todos import router as todos_router
-from app.db.database import engine, SessionLocal, Base
+from app.routers.users import router as users_router
+from app.db.database import engine, Base
+import app.models.todo
+import app.models.user
+import app.models.item
+
+Base.metadata.create_all(bind=engine)
+
+print(Base.metadata)
 
 
 def get_app():
@@ -14,6 +22,7 @@ def get_app():
         '''
     )
     app.include_router(todos_router, prefix="/api/todos")
+    app.include_router(users_router, prefix="/api/users")
     return app
 
 

@@ -14,6 +14,7 @@ class TodoCreate(TodoBase):
 
 class Todo(TodoBase):
     id: int
+    completed: bool = False
     owner_id: int
 
     class Config:
@@ -22,3 +23,4 @@ class Todo(TodoBase):
 
 class TodoUpdate(TodoBase):
     id: int
+    completed: bool = False
