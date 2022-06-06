@@ -2,6 +2,7 @@
 from fastapi import APIRouter, Depends
 import app.schemas.user_schema as schemas
 from app.services.user_svc import UserService
+from app.core.security import reusable_oauth2
 
 router = APIRouter()
 

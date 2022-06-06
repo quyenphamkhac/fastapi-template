@@ -6,7 +6,7 @@ BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '../../'))
 
 class Settings(BaseSettings):
     PROJECT_NAME = os.getenv('PROJECT_NAME', 'FASTAPI BASE')
-    SECRET_KEY = os.getenv('SECRET_KEY', '')
+    SECRET_KEY = os.getenv('SECRET_KEY', 'secretkey')
     API_PREFIX = ''
     BACKEND_CORS_ORIGINS = ['*']
     DATABASE_URL = os.getenv('SQL_DATABASE_URL', '')

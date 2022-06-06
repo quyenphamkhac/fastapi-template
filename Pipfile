@@ -13,6 +13,8 @@ sqlalchemy = "*"
 pg8000 = "*"
 alembic = "*"
 starlette = "*"
+pyjwt = "*"
+passlib = "*"
 
 [dev-packages]
 autopep8 = "*"

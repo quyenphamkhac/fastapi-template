@@ -23,7 +23,7 @@ class ResponseBaseModel(BaseModel):
         return self
 
 
-class ResponseModel(ResponseBaseModel):
+class ResponseModel(ResponseBaseModel, GenericModel, Generic[T]):
     data: Optional[T] = None
 
     def return_with_code(self, code: int, message: str, data: T):
