@@ -11,6 +11,7 @@ easyocr = "*"
 pydantic = "*"
 sqlalchemy = "*"
 pg8000 = "*"
+alembic = "*"
 
 [dev-packages]
 autopep8 = "*"

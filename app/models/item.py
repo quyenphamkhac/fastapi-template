@@ -1,5 +1,5 @@
 from sqlalchemy import Column, Integer, String, Boolean, ARRAY
-from app.db.database import Base
+from app.models.base import Base
 
 
 class Item(Base):
@@ -11,3 +11,4 @@ class Item(Base):
     tags = Column(ARRAY(String))
     completed = Column(Boolean)
     new_field = Column(String)
+    new_field2 = Column(String)
