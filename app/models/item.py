@@ -12,3 +12,4 @@ class Item(Base):
     completed = Column(Boolean)
     new_field = Column(String)
     new_field2 = Column(String)
+    new_field3 = Column(String)

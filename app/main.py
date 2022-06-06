@@ -1,14 +1,11 @@
+from sys import prefix
 from fastapi import FastAPI
-from app.routers.todos import router as todos_router
-from app.routers.users import router as users_router
-from app.db.database import engine, Base
-import app.models.todo
-import app.models.user
-import app.models.item
+from app.routers import router
+from app.db.base import engine
+from app.models import Base
+from starlette.middleware.cors import CORSMiddleware
 
 Base.metadata.create_all(bind=engine)
-
-print(Base.metadata)
 
 
 def get_app():
@@ -21,8 +18,14 @@ def get_app():
         This is a simple API for OCR project.
         '''
     )
-    app.include_router(todos_router, prefix="/api/todos")
-    app.include_router(users_router, prefix="/api/users")
+    app.add_middleware(
+        CORSMiddleware,
+        allow_origins=['*'],
+        allow_credentials=True,
+        allow_methods=['*'],
+        allow_headers=['*'],
+    )
+    app.include_router(router, prefix='')
     return app
 
 

@@ -12,6 +12,7 @@ pydantic = "*"
 sqlalchemy = "*"
 pg8000 = "*"
 alembic = "*"
+starlette = "*"
 
 [dev-packages]
 autopep8 = "*"

@@ -1,6 +1,6 @@
 from sqlalchemy.orm import Session
 from fastapi import Depends
-from app.db.database import get_db
+from app.db.base import get_db
 from app.models.todo import Todo
 import app.schemas.todo_schema as schemas
 
